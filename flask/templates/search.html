@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	 <style type="text/css">
+	 body{
+	  background: white;
+	  font-family: 'Roboto', sans-serif;
+	}
+	.write{
+		color: #00B4CC;
+	}
+	 </style>
+</head>
+<body>
+{% block header %}
+  <h3 class="write" style="margin-bottom: 3rem; margin-left: 1rem">{% block title %}Query > "{{ query }}"{% endblock %}</h3>
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+	{% for item in returned %}
+    	
+    		<div class="card" style="width:80%">
+		        <div class="row no-gutters">
+		            <div class="col">
+		                <div class="card-block px-2" style="margin:1rem;">
+		                    <h4 class="card-title">{{item}}</h4>
+		            
+		                    
+		                    </p>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+    	</a>
+    	<br>
+  	{% endfor %}
+  	{% for item in result2 %}
+    	
+    		<div class="card" style="width:80%">
+		        <div class="row no-gutters">
+		            <div class="col">
+		                <div class="card-block px-2" style="margin:1rem;">
+		                    <h4 class="card-title">{{item}}</h4>
+		                    
+		                    </p>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+    	</a>
+    	<br>
+  	{% endfor %}
+</div>
+{% endblock %}
+</body>
+</html>
+
